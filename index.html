@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Administración | SICECUI </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/awesomplete.css">
+    <script src="js/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/controlador.js"></script>
+    <script src="js/awesomplete.js"></script>
+    <script src="js/hide.js"></script>
+    <script src="js/registro.js" charset="utf-8"></script>
+  </head>
+
+  <body ng-app="sisecui">
+
+    <!-- INICIO DE NAV BAR -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="" style="cursor: default;">SICECUI</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="menu_item"><a href="#">Dashboard</a></li>
+            <li class="menu_item"><a href="#">Settings</a></li>
+            <li class="menu_item"><a href="#">Profile</a></li>
+            <li class="menu_item"><a href="#">Help</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- FIN DE NAVBAR -->
+
+    <div class="container-fluid">
+      <div class="row">
+        <!-- BARRA DE NAVEGACIÓN (LATERAL) -->
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><a href="" id="side_InscAlumno"><img src="img/SchoolDirector.png" width="25px">&nbsp;&nbsp;Inscribir Alumno <span class="sr-only">(current)</span></a></li>
+            <li><a href="" id="side_InscMaestro"><img src="img/Classroom.png" width="25px">&nbsp;&nbsp;Inscribir Maestro</a></li>
+          </ul>
+
+          <ul class="nav nav-sidebar">
+            <li><a href="" id="side_ListaCarreras"><img src="img/Training.png" width="25px">&nbsp;&nbsp;Carreras</a></li>
+            <li><a href="" id="side_ListaMaterias"><img src="img/Courses.png" width="25px">&nbsp;&nbsp;Materias</a></li>
+            <li><a href="" id="side_ListasAlumnos"><img src="img/ReportCard.png" width="25px">&nbsp;&nbsp;Lista de Alumnos</a></li>
+            <li><a href="" id="side_ListasMaestros"><img src="img/ReportCard.png" width="25px">&nbsp;&nbsp;Lista de Maestros</a></li>
+          </ul>
+
+          <ul class="nav nav-sidebar">
+            <li><a href="" id="side_Kardex"><img src="img/Kardex.png" width="25px">&nbsp;&nbsp;Kardex de Alumnos</a></li>
+            <li><a href="" id="side_Mensajes"><img src="img/Mensaje.png" width="25px">&nbsp;&nbsp;Mensajes</a></li>
+            <li><a href="" id="side_Grupos"><img src="img/Group.png" width="25px">&nbsp;&nbsp;Grupos</a></li>
+            <li><a href="">Mas Opciones...</a></li>
+          </ul>
+        </div>
+        <!-- FIN DE BARRA DE NAVEGACIÓN (LATERAL) -->
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+          <!-- ROW DE THUMBNAILS -->
+          <div class="row placeholders" hidden="hidden">
+            <h1 class="page-header">Dashboard</h1>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img src="img/alumnos.png" width="150" height="150" class="img-responsive stat-img" alt="Generic placeholder thumbnail">
+              <h4>Alumnos</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img src="img/maestros.png" width="150" height="150" class="img-responsive stat-img" alt="Generic placeholder thumbnail">
+              <h4>Maestros</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img src="img/materias.png" width="150" height="150" class="img-responsive stat-img" alt="Generic placeholder thumbnail">
+              <h4>Materias</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img src="img/carreras.png" width="150" height="150" class="img-responsive stat-img" alt="Generic placeholder thumbnail">
+              <h4>Carreras</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+          </div>
+          <!-- FIN DE ROW DE THUMBNAILS -->
+
+          <!-- LISTAS DE ALUMNOS -->
+          <div class="row" id="listaAlumno" ng-controller="lista_alumnos" hidden="hidden">
+            <h2 class="sub-header">Lista de Alumnos</h2>
+
+            <div class="input-group">
+              <span class="input-group-addon" id="filtro_alumno"><span class="glyphicon glyphicon-search"></span>&nbsp;Buscar Alumno</span>
+              <input type="text" class="form-control" placeholder="Buscar" aria-describedby="basic-addon1" ng-model="buscarAlumno">
+            </div>
+
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Número de Control</th>
+                    <th>CURP</th>
+                    <th>Origen</th>
+                    <th>Carrera</th>
+                    <th>Cuatrimestre</th>
+                    <th>Fecha de Inscripción</th>
+                  </tr>
+                </thead>
+                <tbody ng-repeat="alumno in alumnos | filter:buscarAlumno">
+                  <tr>
+                    <td>{{alumno.nombre_alumno}}</td>
+                    <td>{{alumno.numero_control}}</td>
+                    <td>{{alumno.curp_alumno}}</td>
+                    <td>{{alumno.origen}}</td>
+                    <td>{{alumno.carrera}}</td>
+                    <td>{{alumno.cuatrimestre}}</td>
+                    <td>{{alumno.fechainscripcion_alumno}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- FIN LISTA DE ALUMNOS -->
+
+          <!-- LISTA DE MAESTROS -->
+          <div class="row" id="listaMaestros" ng-controller="lista_maestros" hidden="hidden">
+            <h2 class="sub-header">Lista de Maestros</h2>
+
+            <div class="input-group">
+              <span class="input-group-addon" id="filtro_maestro"><span class="glyphicon glyphicon-search"></span>&nbsp;Buscar Maestro</span>
+              <input type="text" class="form-control" placeholder="Buscar" aria-describedby="basic-addon1" ng-model="buscarMaestro">
+            </div>
+
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Número de Control</th>
+                    <th>RFC</th>
+                    <th>Origen</th>
+                    <th>CURP</th>
+                    <th>Fecha de Ingreso</th>
+                  </tr>
+                </thead>
+                <tbody ng-repeat="maestro in maestros | filter:buscarMaestro">
+                  <tr>
+                    <td>{{maestro.nombre_maestro}}</td>
+                    <td>{{maestro.numero_control_maestro}}</td>
+                    <td>{{maestro.rfc_maestro}}</td>
+                    <td>{{maestro.origen}}</td>
+                    <td>{{maestro.curp_maestro}}</td>
+                    <td>{{maestro.fecha_ingreso_maestro}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- FIN LISTA DE MAESTROS -->
+
+          <!-- LISTA DE MATERIAS -->
+          <div class="row" id="listaMaterias" ng-controller="lista_materias" hidden="hidden">
+            <h2 class="sub-header">Lista de Materias</h2>
+
+            <div class="input-group">
+              <span class="input-group-addon" id="filtro_maestro"><span class="glyphicon glyphicon-search"></span>&nbsp;Buscar Materia</span>
+              <input type="text" class="form-control" placeholder="Buscar" aria-describedby="basic-addon1" ng-model="buscarMateria">
+            </div>
+
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Matrícula</th>
+                    <th>Carrera</th>
+                    <th>Nombre</th>
+                    <th>Cuatrimestre</th>
+                    <th>Turno</th>
+                    <th>Créditos</th>
+                    <th>Instalaciones</th>
+                    <th>Horas Docente</th>
+                    <th>Horas Independiente</th>
+                    <th>Seriación</th>
+                  </tr>
+                </thead>
+                <tbody ng-repeat="materia in materias | filter:buscarMateria">
+                  <tr>
+                    <td>{{materia.matricula_materia}}</td>
+                    <td>{{materia.carrera}}</td>
+                    <td>{{materia.nombre_materia}}</td>
+                    <td>{{materia.cuatrimestre}}</td>
+                    <td>{{materia.turno}}</td>
+                    <td>{{materia.creditos}}</td>
+                    <td>{{materia.instalaciones}}</td>
+                    <td>{{materia.horas_docente}}</td>
+                    <td>{{materia.horas_independientes}}</td>
+                    <td>{{materia.seriacion}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- FIN LISTA DE MATERIAS -->
+
+          <!-- LISTAS DE CARRERAS -->
+          <div class="row" id="listaCarreras" ng-controller="lista_carreras" hidden="hidden">
+            <h2 class="sub-header">Lista de Carreras</h2>
+
+            <div class="input-group">
+              <span class="input-group-addon" id="filtro_carrera"><span class="glyphicon glyphicon-search"></span>&nbsp;Buscar Carrera</span>
+              <input type="text" class="form-control" placeholder="Buscar" aria-describedby="basic-addon1" ng-model="buscarCarrera">
+            </div>
+
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Clave de Carrera</th>
+                    <th>Nombre</th>
+                  </tr>
+                </thead>
+                <tbody ng-repeat="carrera in carreras | filter:buscarCarrera">
+                  <tr>
+                    <td>{{carrera.clave_carrera}}</td>
+                    <td>{{carrera.nombre_carrera}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- FIN LISTA DE CARRERAS -->
+
+          <!-- INSCRIPCION DE ALUMNO -->
+          <div class="row" id="inscripcionAlumno" ng-controller="inscripcion_alumno" hidden="hidden">
+              <h2 class="sub-header">Inscripcion de Alumno</h2>
+              <form action="model/inscripcion_alumno.php" method="post" role="form">
+                <div class="form-group">
+                  <div class="row">
+                    <!--columna izquierda (inscripcion alumno) -->
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                      <div class="form-group">
+    										<label for="nombreA">Nombre</label>
+    										<input type="text" class="form-control" name="nombreA" id="nombreA" placeholder="" required="true">
+    										<label for="apepatA">Apellido Paterno</label>
+    										<input type="text" class="form-control" name="apepatA" id="apepatA" placeholder="" required="true">
+    										<label for="apematA">Apellido Materno</label>
+    										<input type="text" class="form-control" name="apematA" id="apematA" placeholder="" required="true">
+    										<label for="curpA">CURP</label>
+    										<input type="text" class="form-control" name="curpA" id="curpA" placeholder="" required="true">
+                        <label for="correoA">Correo</label>
+                        <input type="text" class="form-control" name="correoA" id="correoA" placeholder="" required="true">
+                        <label for="dirA">Dirección</label>
+    										<input type="text" class="form-control" name="dirA" id="dirA" placeholder="" required="true">
+    										<br>
+    										<button type="submit" class="btn btn-primary">Inscribir</button>
+    									</div>
+                    </div>
+                    <!--columna derecha (inscripcion alumno) -->
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                      <div class="form-group">
+    										<label for="telA">Teléfono</label>
+    										<input type="number" class="form-control" name="telA" id="telA" placeholder="" required="true">
+    										<label for="munA">Municipio</label>
+    										<input type="text" class="form-control" name="munA" id="munA" placeholder="" required="true">
+    										<label for="entA">Entidad</label>
+    										<input type="text" class="form-control" name="entA" id="entA" placeholder="" required="true">
+                        <label for="trabajaA">El alumno trabaja?</label><br>
+    										<input type="radio" name="trabajaA" id="trabajaA1" value="si"> SI </input><br>
+    										<input type="radio" name="trabajaA" id="trabajaA2" value="no"> NO</input><br>
+    										<label for="inputCarrera">Carrera</label><br>
+    										<select id="inputCarrera" name="inputCarrera" class="form-control" ng-model="insc_carrera_selected" >
+    										</select>
+    									</div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+          </div>
+          <!-- FIN DE INSCRIPCION DE ALUMNO -->
+
+          <!-- INSCRIPCION DE MAESTRO -->
+          <div class="row" id="inscripcionMaestro" ng-controller="inscripcion_maestro" hidden="hidden">
+              <h2 class="sub-header">Inscripcion de Maestro</h2>
+              <form action="inscribirM.php" method="POST" role="form">
+								<legend>Agregar Maestro</legend>
+
+								<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+									<div class="form-group">
+										<label for="nombreM">Nombre</label>
+										<input type="text" class="form-control" name="nombreM" id="nombreM" placeholder="" required="true">
+										<label for="apepatM">Apellido Paterno</label>
+										<input type="text" class="form-control" name="apepatM" id="apepatM" placeholder="" required="true">
+										<label for="apematM">Apellido Materno</label>
+										<input type="text" class="form-control" name="apematM" id="apematM" placeholder="" required="true">
+										<label for="curpM">CURP</label>
+										<input type="text" class="form-control" name="curpM" id="curpM" placeholder="" required="true">
+										<br>
+										<button type="submit" class="btn" style="background: #006538; color: white;">Agregar</button>
+									</div>
+								</div>
+
+								<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+									<div class="form-group">
+										<label for="direccionM">Dirección</label>
+										<input type="text" class="form-control" name="direccionM" id="direccionM" placeholder="" required="true">
+										<label for="telefonoM">Teléfono</label>
+										<input type="number" class="form-control" name="telefonoM" id="telefonoM" placeholder="" required="true">
+										<label for="municipioM">Municipio</label>
+										<input type="text" class="form-control" name="municipioM" id="municipioM" placeholder="" required="true">
+										<label for="edoM">Estado</label>
+										<input type="text" class="form-control" name="edoM" id="edoM" placeholder="" required="true">
+									</div>
+								</div>
+
+								<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+									<div class="form-group">
+										<label for="rfcM">RFC</label>
+										<input type="text" class="form-control" name="rfcM" id="rfcM" placeholder="" required="true">
+										<label for="cpM">Código Postal</label>
+										<input type="number" class="form-control" name="cpM" id="cpM" placeholder="" required="true">
+										<label for="beneficiarioM">Nombre del Beneficiario</label>
+										<input type="text" class="form-control" name="beneficiarioM" id="beneficiarioM" placeholder="" required="true">
+										<label for="dirbenM">Dirección del Beneficiario</label>
+										<input type="text" class="form-control" name="dirbenM" id="dirbenM" placeholder="" required="true">
+									</div>
+								</div>
+							</form>
+          </div>
+          <!-- FIN DE INSCRIPCION DE MAESTRO -->
+
+          <!-- Lista de Alumnos para mostrar Kardex -->
+          <div class="row" id="kardex" ng-controller="kardex_alumno" hidden="hidden">
+            <h2 class="sub-header">Kardex</h2>
+
+            <!-- ESPACIO PARA PANEL DE BUSQUEDA DE ALUMNOS E INFORMACION DEL KARDEX -->
+            <div class="row">
+
+              <!-- COLUMNA PARA SELECCION DE ALUMNO -->
+              <div class="col-md-3">
+                <form>
+                  <div class="form-group">
+                    <label for="select_carrera">Seleccionar Carrera</label>
+                    <select class="form-control" name="select_carrera" id="select_carrera" ng-model="selectedCarrera" ng-change="update(selectedCarrera);">
+                      <option ng-repeat="carrera in nombres_carreras" value="{{carrera.id}}">{{carrera.nombre}}</option>
+                    </select><br>
+                  </div>
+
+                  <div class="form-group">
+                    <!-- https://leaverou.github.io/awesomplete/ -->
+                    <label for="select_alumno">Seleccionar Alumno</label>
+                    <input type="text" name="name" value="" class="form-control" id="myinput" required="required">
+                    <span class="help-block" id="help_alumno">Los alumnos se filtran en base a la carrera seleccionada.</span>
+                  </div>
+                  <button type="button" class="btn btn-primary pull-left" ng-click="ConsultarKardex()">Consultar Kardex</button>
+                </form>
+              </div>
+
+              <!-- COLUMNA PARA INFORMACION DE KARDEX DEL ALUMNO -->
+              <div class="col-md-9">
+                <label >Información de Kardex</label>
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title" id="kardex_nombre_alumno">Nombre del Alumno</h3>
+                  </div>
+                  <div class="panel-body">
+                    Panel content
+                  </div>
+                  <!-- List group -->
+                  <ul class="list-group">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Morbi leo risus</li>
+                    <li class="list-group-item">Porta ac consectetur ac</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                  </ul>
+                </div>
+                <button type="button" class="btn btn-default btn-lg pull-right">
+                  <span class="glyphicon glyphicon-print" aria-hidden="true"></span> Imprimir Kardex
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- FIN de Lista de Alumnos para mostrar Kardex -->
+
+          <!-- MENSAJES -->
+          <div class="row" id="mensajes" ng-controller="centro_mensajes" hidden="hidden">
+            <h2 class="sub-header">Mensajes</h2>
+            <div class="form-group">
+              <label for="destinatario">Destinatario:</label>
+              <input type="text" class="form-control" id="destinatario" required>
+              <label for="comment">Cuerpo del mensaje:</label>
+              <textarea class="form-control" rows="5" id="comment" required></textarea>
+              <br />
+              <button type="submit" name="button" class="btn btn-primary pull-right"><span class="glyphicon glyphicon-send" aria-hidden="true" ng-click="MandarMensaje()"></span>&nbsp;&nbsp;Enviar</button>
+            </div>
+          </div>
+          <!-- FIN DE MENSAJES -->
+
+          <div class="row" id="grupos" ng-controller="asignacion_grupos" hidden="hidden">
+            <h2 class="sub-header">Grupos</h2>
+
+            <!-- COLUMNA PARA FILTRAR ALUMNO -->
+            <div class="col-md-6">
+              <div class="row">
+                <div class="input-group">
+                  <span class="input-group-addon" id="filtro_alumno"><span class="glyphicon glyphicon-search"></span>&nbsp;Buscar Alumno</span>
+                  <input type="text" class="form-control" placeholder="Buscar" aria-describedby="basic-addon1" ng-model="buscarAlumno">
+                </div>
+              </div>
+
+              <div class="row">
+
+              </div>
+
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Nombre</th>
+                      <th>Número de Control</th>
+                      <th>Carrera</th>
+                      <th>Cuatrimestre</th>
+                      <th>Asignar Grupos</th>
+                    </tr>
+                  </thead>
+                  <tbody ng-repeat="alumno in alumnos | filter:buscarAlumno">
+                    <tr>
+                      <td>{{alumno.nombre_alumno}}</td>
+                      <td>{{alumno.numero_control}}</td>
+                      <td>{{alumno.carrera}}</td>
+                      <td>{{alumno.cuatrimestre}}</td>
+                      <td><button type="button" name="button" class="btn btn-default" id="{{'btnGrupos_'+alumno.numero_control}}" ng-click="AsignarGrupo(alumno.nombre_alumno,alumno.numero_control,alumno.carrera)">Asignar Grupo</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- COLUMNA PARA ASIGNAR GRUPO -->
+            <div class="col-md-5">
+              <div class="row">
+                <div class="panel panel-default" style="margin-left:20px;">
+                  <!-- Default panel contents -->
+                  <div class="panel-heading">{{nombre_alumnoSelected}}</div>
+                  <div class="panel-body">
+                    <p><strong>Nombre:&nbsp;</strong>{{numctrl_alumnoSelected}}</p>
+                    <p><strong>Num. Control:&nbsp;</strong>{{carrera_alumnoSelected}}</p>
+                  </div>
+
+                  <!-- List group -->
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Materia</strong> - Maestro</li>
+                    <li class="list-group-item"><strong>Materia</strong> - Maestro</li>
+                    <li class="list-group-item"><strong>Materia</strong> - Maestro</li>
+                    <li class="list-group-item"><strong>Materia</strong> - Maestro</li>
+                    <li class="list-group-item"><strong>Materia</strong> - Maestro</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-xs-6">
+                  <button type="button" class="btn btn-success btn-lg" style="margin-top:20px;">
+                    <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Asignar Grupo
+                  </button>
+                </div>
+                <div class="col-md-6 col-xs-6">
+                  <button type="button" class="btn btn-danger btn-lg" style="margin-top:20px;">
+                    <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span> Dar de Baja
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

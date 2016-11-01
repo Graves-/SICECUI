@@ -1,0 +1,18 @@
+-agregar carreras
+-agregar opción para cambiar alumnos de cuatrimestre y materias
+
+-agregar tabla de estatus_alumno (regular,irregular,materias libres,baja,egresado,titulado)
+
+18 cuatrimestres límite.
+
+-generar boleta cada cuatrimestre
+
+-generar acta de extras )
+	promedio 0 - 5.9 = 5
+			redondeo 0.6+
+
+-certificado total en base al kardex
+-constancia (cuerpo de constancia y datos del alumno)
+-considerar agregar foto de alumnos y maestros
+-recuperación de contraseñas
+			 

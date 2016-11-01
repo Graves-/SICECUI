@@ -1,0 +1,111 @@
+$(document).ready(function(){
+    $('#side_InscAlumno').click(function(){
+      $('#inscripcionAlumno').show('fast');
+      $('#listaAlumno').hide();
+      $('#listaMaestros').hide();
+      $('#listaMaterias').hide();
+      $('#listaCarreras').hide();
+      $('#inscripcionMaestro').hide();
+      $('#kardex').hide();
+      $('#mensajes').hide();
+      $('#grupos').hide();
+    });
+
+    $('#side_InscMaestro').click(function(){
+      $('#inscripcionAlumno').hide();
+      $('#listaAlumno').hide();
+      $('#listaMaestros').hide();
+      $('#listaMaterias').hide();
+      $('#listaCarreras').hide();
+      $('#inscripcionMaestro').show('fast');
+      $('#kardex').hide();
+      $('#mensajes').hide();
+      $('#grupos').hide();
+    });
+
+    $('#side_ListaCarreras').click(function(){
+      $('#inscripcionAlumno').hide();
+      $('#listaAlumno').hide();
+      $('#listaMaestros').hide();
+      $('#listaMaterias').hide();
+      $('#listaCarreras').show('fast');
+      $('#inscripcionMaestro').hide();
+      $('#kardex').hide();
+      $('#mensajes').hide();
+      $('#grupos').hide();
+    });
+
+    $('#side_ListaMaterias').click(function(){
+      $('#inscripcionAlumno').hide();
+      $('#listaAlumno').hide();
+      $('#listaMaestros').hide();
+      $('#listaMaterias').show('fast');
+      $('#listaCarreras').hide();
+      $('#inscripcionMaestro').hide();
+      $('#kardex').hide();
+      $('#mensajes').hide();
+      $('#grupos').hide();
+    });
+
+    $('#side_ListasAlumnos').click(function(){
+      $('#inscripcionAlumno').hide();
+      $('#listaAlumno').show('fast');
+      $('#listaMaestros').hide();
+      $('#listaMaterias').hide();
+      $('#listaCarreras').hide();
+      $('#inscripcionMaestro').hide();
+      $('#kardex').hide();
+      $('#mensajes').hide();
+      $('#grupos').hide();
+    });
+
+    $('#side_ListasMaestros').click(function(){
+      $('#inscripcionAlumno').hide();
+      $('#listaAlumno').hide();
+      $('#listaMaestros').show('fast');
+      $('#listaMaterias').hide();
+      $('#listaCarreras').hide();
+      $('#inscripcionMaestro').hide();
+      $('#kardex').hide();
+      $('#mensajes').hide();
+      $('#grupos').hide();
+    });
+
+    $('#side_Kardex').click(function(){
+      $('#inscripcionAlumno').hide();
+      $('#listaAlumno').hide();
+      $('#listaMaestros').hide();
+      $('#listaMaterias').hide();
+      $('#listaCarreras').hide();
+      $('#inscripcionMaestro').hide();
+      $('#kardex').show('fast');
+      $('#mensajes').hide();
+      $('#grupos').hide();
+    });
+
+    $('#side_Mensajes').click(function(){
+      $('#inscripcionAlumno').hide();
+      $('#listaAlumno').hide();
+      $('#listaMaestros').hide();
+      $('#listaMaterias').hide();
+      $('#listaCarreras').hide();
+      $('#inscripcionMaestro').hide();
+      $('#kardex').hide();
+      $('#grupos').hide();
+      $('#mensajes').show('fast');
+    });
+
+    $('#side_Grupos').click(function(){
+      $('#inscripcionAlumno').hide();
+      $('#listaAlumno').hide();
+      $('#listaMaestros').hide();
+      $('#listaMaterias').hide();
+      $('#listaCarreras').hide();
+      $('#inscripcionMaestro').hide();
+      $('#kardex').hide();
+      $('#mensajes').hide();
+      $('#grupos').show('fast');
+    });
+
+
+});
